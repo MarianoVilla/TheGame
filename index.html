@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             background-color: #1a1a1a;
             font-family: 'Arial', sans-serif;
             color: #fff;
@@ -47,11 +49,32 @@
             animation: revealText 1s ease-out 2s forwards;
         }
 
+        .trolldager {
+            opacity: 0;
+            border-radius: 20px;
+            width: 200px;
+            height: 200px;
+            animation: troloaparece 2s ease-out 3s forwards;
+        }
+
+        @keyframes troloaparece {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(0);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(-20px);
@@ -62,6 +85,7 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
@@ -87,6 +111,7 @@
         .heart {
             color: #ff4444;
         }
+
         .github-link {
             position: fixed;
             top: 20px;
@@ -101,8 +126,10 @@
 
         .github-link:hover {
             color: #ff6666;
-        }    </style>
+        }
+    </style>
 </head>
+
 <body>
     <a href="https://github.com/MarianoVilla/TheGame" target="_blank" class="github-link">
         <i class="fab fa-github"></i>
@@ -112,6 +139,9 @@
         <h1>The Game</h1>
         <p class="lost">You just lost :(</p>
     </div>
-    <p class="credit">You got trolled with <span class="heart">♥</span> by <a target="_blank" href="https://github.com/MarianoVilla">Dot Dager</a>.</p>
+    <img class="trolldager" src="./assets/trolldager.webp" alt="skanuswashere" />
+    <p class="credit">You got trolled with <span class="heart">♥</span> by <a target="_blank"
+            href="https://github.com/MarianoVilla">Dot Dager</a>.</p>
 </body>
-</html>    
+
+</html>
